@@ -9,7 +9,6 @@ import Navbar from "@/components/navbar/Navbar"
 
 
 export default function page() {
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar/>
