@@ -1,17 +1,17 @@
 import ScrollButton from "@/components/buttons/ScrollButton"
+import SubmitResume from "@/components/buttons/SubmitResume"
 import JobGroup from "@/components/careers/JobGroup"
 import Joinus from "@/components/careers/JoinUs"
 
 import Process from "@/components/careers/Process"
 import Navbar from "@/components/navbar/Navbar"
-import { Button } from "@/components/ui/button"
 
 
-export default function Page() {
+
+export default function page() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
       <Navbar/>
       <section className="relative py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -37,9 +37,7 @@ export default function Page() {
           <p className="text-xl text-muted-foreground mb-8">
             {`We're always looking for talented individuals to join our team. Send us your resume, and we'll keep you in mind for future opportunities.`}
           </p>
-          <Button size="lg">
-            Submit Your Resume
-          </Button>
+          <SubmitResume/>
         </div>
       </section>
     </div>
