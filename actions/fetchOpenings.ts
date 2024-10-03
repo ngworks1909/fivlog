@@ -19,7 +19,8 @@ export const fetchOpenings = async() => {
     const cachedData = await redis.get(redisKey);
     if (cachedData) {
         const jobs: JobType[] =  JSON.parse(cachedData);
-        return jobs
+        const currentTime = new Date()
+        return jobs.filter((job) => job && new Date(job.expiresOn) > currentTime);
     }
     const jobs = await prisma.job.findMany({
         where: {

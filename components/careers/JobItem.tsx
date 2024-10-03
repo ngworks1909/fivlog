@@ -66,11 +66,11 @@ export default function JobItem({job} : {job: JobType}) {
               <h4 className="text-sm font-medium mb-2">Application Period</h4>
               <div className="flex items-center text-sm text-muted-foreground mb-4">
                 <Calendar className="w-4 h-4 mr-2" />
-                <span>Started on: {new Date(job.startedOn).toLocaleDateString()}</span>
+                <span>Posted on: {new Date(job.startedOn).toLocaleDateString()}</span>
               </div>
               <div className="flex items-center text-sm text-muted-foreground mb-4">
                 <Calendar className="w-4 h-4 mr-2" />
-                <span>Expires on: {new Date(job.expiresOn).toLocaleDateString()}</span>
+                <span>Last date to apply: {new Date(job.expiresOn).toLocaleDateString()}</span>
               </div>
               <div className="pt-3">
               <ApplyButton linkedInUrl={job.linkedInUrl}/>
